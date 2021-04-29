@@ -10,22 +10,22 @@ export const SecondsCounter = props => {
 					</div>
 				</div>
 				<div className="t1">
-					<div className="numbers">{props.seconds}</div>
+					<div className="numbers">{props.data}</div>
 				</div>
 				<div className="t2">
-					<div className="numbers">{props.seconds}</div>
+					<div className="numbers">{props.data}</div>
 				</div>
 				<div className="t3">
-					<div className="numbers">{props.seconds}</div>
+					<div className="numbers">{props.data}</div>
 				</div>
 				<div className="t4">
-					<div className="numbers">{props.seconds}</div>
+					<div className="numbers">{props.data}</div>
 				</div>
 				<div className="t5">
-					<div className="numbers">{props.seconds}</div>
+					<div className="numbers">{props.data}</div>
 				</div>
 				<div className="t6">
-					<div className="numbers">{props.seconds}</div>
+					<div className="numbers">{props.data}</div>
 				</div>
 			</div>
 			<h1>Simple Counter with React</h1>
@@ -34,5 +34,5 @@ export const SecondsCounter = props => {
 };
 
 SecondsCounter.propTypes = {
-	seconds: PropTypes.number
+	data: PropTypes.number
 };
