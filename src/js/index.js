@@ -8,10 +8,4 @@ import "bootstrap";
 //include your index.scss file into the bundle
 import "../styles/index.scss";
 
-//import your own components
-
-//render your react application
-ReactDOM.render(
-	<SecondsCounter seconds={12} />,
-	document.querySelector("#app")
-);
+ReactDOM.render(<SecondsCounter seconds={0} />, document.querySelector("#app"));

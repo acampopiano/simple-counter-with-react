@@ -12,9 +12,11 @@
 
 */
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 $font: 'Lato', sans-serif;
 $big: 'Montserrat', sans-serif;
+$numero: 'Abril Fatface', cursive;
 
 $black: #000;
 $white: #F6F4F3; 
@@ -66,7 +68,7 @@ h1 {
   border: 2px solid $white
 }
 .numbers {
-  font-family: $big;
+  font-family: $numero;
   color: $white;
   font-size: 4em;
 }
