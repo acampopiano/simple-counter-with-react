@@ -10,19 +10,19 @@ export const SecondsCounter = props => {
 					</div>
 				</div>
 				<div className="t1">
-					<div className="numbers">{props.data}</div>
+					<div className="numbers">0</div>
 				</div>
 				<div className="t2">
-					<div className="numbers">{props.data}</div>
+					<div className="numbers">0</div>
 				</div>
 				<div className="t3">
-					<div className="numbers">{props.data}</div>
+					<div className="numbers">0</div>
 				</div>
 				<div className="t4">
-					<div className="numbers">{props.data}</div>
+					<div className="numbers">0</div>
 				</div>
 				<div className="t5">
-					<div className="numbers">{props.data}</div>
+					<div className="numbers">0</div>
 				</div>
 				<div className="t6">
 					<div className="numbers">{props.data}</div>
