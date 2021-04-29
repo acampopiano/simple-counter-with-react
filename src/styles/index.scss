@@ -11,3 +11,62 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900');
+
+$font: 'Lato', sans-serif;
+$big: 'Montserrat', sans-serif;
+
+$black: #000;
+$white: #F6F4F3; 
+html {
+  display: grid;
+  min-height: 100%;
+}
+
+body {
+  display: grid;
+  background: $black;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 950px;
+  height: 480px;
+}
+
+h1 {
+  font-family: $font;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: $white;
+}
+
+#timer {
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font;
+  font-size: .7em;
+  letter-spacing: 5px;
+  margin-top: 25%;
+}
+
+.t1, .t2, .t3, .t4, .t5, .t6, .clock {
+  display: inline-block;
+  padding: 20px;
+  width: 100px;
+  border-radius: 5px;
+  margin: 10px;
+  background: $black;
+  border: 2px solid $white
+}
+.numbers {
+  font-family: $big;
+  color: $white;
+  font-size: 4em;
+}
