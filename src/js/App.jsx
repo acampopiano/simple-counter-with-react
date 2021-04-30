@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { SecondsCounter } from "./component/secondscounter";
 const App = () => {
 	const [seconds, setSeconds] = useState(0);
