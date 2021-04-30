@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { SecondsCounter } from "./component/secondscounter";
+
 const App = () => {
 	const [second, setSecond] = useState(0);
 	const [minute, setMinute] = useState(0);
@@ -11,7 +12,12 @@ const App = () => {
 	const [isActive, setIsActive] = useState(true);
 	const [counter, setCounter] = useState(0);
 
-	function stopTimer() {
+	const active = () => {
+		if (isActive) setIsActive(false);
+		else setIsActive(true);
+	};
+
+	const stopTimer = () => {
 		setIsActive(false);
 		setCounter(0);
 		setSecond(0);
@@ -20,7 +26,7 @@ const App = () => {
 		setDay(0);
 		setMonth(0);
 		setYear(0);
-	}
+	};
 	useEffect(() => {
 		let intervalId;
 
@@ -58,6 +64,7 @@ const App = () => {
 				day={day}
 				month={month}
 				year={year}
+				active={isActive}
 			/>
 		</div>
 	);
