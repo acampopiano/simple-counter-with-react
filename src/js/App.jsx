@@ -2,33 +2,24 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { SecondsCounter } from "./component/secondscounter";
 const App = () => {
-	/*const [seconds, setSeconds] = useState(0);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setSeconds(seconds => seconds + 1);
-		}, 1000);
-		return () => clearInterval(interval);
-    }, []);*/
-
-	const [second, setSecond] = useState("00");
-	const [minute, setMinute] = useState("00");
-	const [hour, setHour] = useState("00");
-	const [day, setDay] = useState("00");
-	const [month, setMonth] = useState("00");
-	const [year, setYear] = useState("00");
+	const [second, setSecond] = useState(0);
+	const [minute, setMinute] = useState(0);
+	const [hour, setHour] = useState(0);
+	const [day, setDay] = useState(0);
+	const [month, setMonth] = useState(0);
+	const [year, setYear] = useState(0);
 	const [isActive, setIsActive] = useState(true);
 	const [counter, setCounter] = useState(0);
 
 	function stopTimer() {
 		setIsActive(false);
 		setCounter(0);
-		setSecond("00");
-		setMinute("00");
-		setHour("00");
-		setDay("00");
-		setMonth("00");
-		setYear("00");
+		setSecond(0);
+		setMinute(0);
+		setHour(0);
+		setDay(0);
+		setMonth(0);
+		setYear(0);
 	}
 	useEffect(() => {
 		let intervalId;
@@ -44,37 +35,12 @@ const App = () => {
 					counter / (60 * 60 * 24 * 30 * 12)
 				);
 
-				const computedSecond =
-					String(secondCounter).length === 1
-						? `0${secondCounter}`
-						: secondCounter;
-				const computedMinute =
-					String(minuteCounter).length === 1
-						? `0${minuteCounter}`
-						: minuteCounter;
-				const computedHour =
-					String(hourCounter).length === 1
-						? `0${hourCounter}`
-						: hourCounter;
-				const computedDay =
-					String(dayCounter).length === 1
-						? `0${dayCounter}`
-						: dayCounter;
-				const computedMonth =
-					String(monthCounter).length === 1
-						? `0${monthCounter}`
-						: monthCounter;
-				const computedYear =
-					String(yearCounter).length === 1
-						? `0${yearCounter}`
-						: yearCounter;
-
-				setSecond(computedSecond);
-				setMinute(computedMinute);
-				setHour(computedHour);
-				setDay(computedDay);
-				setMonth(computedMonth);
-				setYear(computedYear);
+				setSecond(secondCounter);
+				setMinute(minuteCounter);
+				setHour(hourCounter);
+				setDay(dayCounter);
+				setMonth(monthCounter);
+				setYear(yearCounter);
 
 				setCounter(counter => counter + 1);
 			}, 1000);
