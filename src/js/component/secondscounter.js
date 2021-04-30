@@ -17,16 +17,16 @@ export const SecondsCounter = props => {
 					</div>
 				</div>
 				<div className="t1">
-					<div className="numbers">0</div>
+					<div className="numbers">{props.year}</div>
 				</div>
 				<div className="t2">
-					<div className="numbers">0</div>
+					<div className="numbers">{props.mont}</div>
 				</div>
 				<div className="t3">
-					<div className="numbers">0</div>
+					<div className="numbers">{props.day}</div>
 				</div>
 				<div className="t4">
-					<div className="numbers">0</div>
+					<div className="numbers">{props.hour}</div>
 				</div>
 				<div className="t5">
 					<div className="numbers">{props.minute}</div>
@@ -42,5 +42,9 @@ export const SecondsCounter = props => {
 
 SecondsCounter.propTypes = {
 	second: PropTypes.string,
-	minute: PropTypes.string
+	minute: PropTypes.string,
+	hour: PropTypes.string,
+	day: PropTypes.string,
+	month: PropTypes.string,
+	year: PropTypes.string
 };
