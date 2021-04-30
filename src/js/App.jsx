@@ -11,12 +11,10 @@ const App = () => {
 	const [year, setYear] = useState(0);
 	const [isActive, setIsActive] = useState(true);
 	const [counter, setCounter] = useState(0);
-
 	const activeFunction = () => {
 		if (isActive) setIsActive(false);
 		else setIsActive(true);
 	};
-
 	const stopTimer = () => {
 		setIsActive(false);
 		setCounter(0);
@@ -54,7 +52,6 @@ const App = () => {
 
 		return () => clearInterval(intervalId);
 	}, [isActive, counter]);
-
 	return (
 		<div>
 			<SecondsCounter
