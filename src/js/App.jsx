@@ -12,7 +12,7 @@ const App = () => {
 	const [isActive, setIsActive] = useState(true);
 	const [counter, setCounter] = useState(0);
 
-	const active = () => {
+	const activeFunction = () => {
 		if (isActive) setIsActive(false);
 		else setIsActive(true);
 	};
@@ -65,6 +65,8 @@ const App = () => {
 				month={month}
 				year={year}
 				active={isActive}
+				activeFunction={activeFunction}
+				stopTimer={stopTimer}
 			/>
 		</div>
 	);

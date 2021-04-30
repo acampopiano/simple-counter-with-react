@@ -1,9 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import stopTimer from "../App.jsx";
-import active from "../App.jsx";
-
 export const SecondsCounter = props => {
 	return (
 		<div className="container">
@@ -40,10 +37,12 @@ export const SecondsCounter = props => {
 				</div>
 			</div>
 			<div className="buttons d-flex justify-content-center">
-				<button onClick={active} className="start">
+				<button
+					onClick={() => props.activeFunction()}
+					className="start">
 					{props.active ? "Pause" : "Start"}
 				</button>
-				<button onClick={stopTimer} className="reset">
+				<button onClick={() => props.stopTimer()} className="reset">
 					Reset
 				</button>
 			</div>
@@ -59,5 +58,7 @@ SecondsCounter.propTypes = {
 	day: PropTypes.number,
 	month: PropTypes.number,
 	year: PropTypes.number,
-	active: PropTypes.bool
+	active: PropTypes.bool,
+	activeFunction: PropTypes.func,
+	stopTimer: PropTypes.func
 };
